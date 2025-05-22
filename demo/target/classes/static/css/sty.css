@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f4f4f4;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.section_label {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #222;
+    align-self: flex-start;
+    padding-left: 2.5vw;
+    font-weight: bold;
+}
+
+.container {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 20px;
+    padding: 30px 0;
+}
+
+.final_ans {
+    width: 95vw;
+    height: 5vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left_box {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 15px; /* Space from the left */
+}
+
+.left {
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 10px 15px; /* Top/Bottom: 10px, Left/Right: 15px */
+    color: #000;
+}
+
+
+.right_box {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.download-label {
+    font-size: 0.95rem;
+    padding: 6px 12px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.download-label:hover {
+    background-color: #0056b3;
+}
+
+.split_div {
+    width: 95vw;
+    height: 14vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.first_div {
+    width: 100%;
+    height: 7vh;
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+    font-weight: bold;
+    font-size: 1.05rem;
+}
+
+.remaining_divs {
+    display: flex;
+    width: 100%;
+    height: 7vh;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.second_div,
+.third_div,
+.fourth_div {
+    width: 33.33%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+    background-color: #e3f2fd;
+    border-radius: 6px;
+    font-size: 1rem;
+    color: #333;
+    font-weight: 500;
+}
+
+/* Ensure labels and download text aren't underlined or blue */
+a,
+a:visited,
+a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+.visual {
+    width: 95vw;
+    height: 30vw;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.visual_top {
+    width: 100%;
+    height: 7vh;
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.visual_content {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: calc(100% - 7vh); 
+    width: 100%;
+    gap: 10px;
+}
+
+.visual_div1, .visual_div2 {
+    width: 48%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+canvas {
+    border: 2px solid #ccc;
+    border-radius: 8px;
+}

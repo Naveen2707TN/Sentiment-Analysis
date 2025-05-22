@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SentimentAnalysis | Home</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-gradient">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <i class="fas fa-smile-beam me-2"></i>SentimentAnalysis
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="#"
+                ><i class="fas fa-home me-1"></i> Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#features"
+                ><i class="fas fa-chart-pie me-1"></i> Features</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about"
+                ><i class="fas fa-info-circle me-1"></i> About</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact"
+                ><i class="fas fa-envelope me-1"></i> Contact</a
+              >
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+              >
+                <i class="fas fa-user me-1"></i> Account
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="/result">Logout</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <h1 class="display-4 fw-bold mb-4">
+              Analyze Sentiments in Your Data
+            </h1>
+            <p class="lead mb-4">
+              Upload your CSV files and get instant sentiment analysis results
+              with our powerful AI-driven platform.
+            </p>
+            <div class="d-flex gap-3">
+              <button
+                class="btn btn-primary btn-lg"
+                data-bs-toggle="modal"
+                data-bs-target="#uploadModal"
+              >
+                <i class="fas fa-upload me-2"></i>Upload CSV
+              </button>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <img
+              src="/img/360_F_977279729_hbh0AXqP8pKS8G1A2GppvUqgOQ96OlVN.jpg"
+              alt="Sentiment Analysis"
+              class="img-fluid rounded shadow"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-5 bg-light">
+      <div class="container">
+        <h2 class="text-center mb-5">Key Features</h2>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm">
+              <div class="card-body text-center p-4">
+                <div class="feature-icon mb-3">
+                  <i class="fas fa-file-csv fa-3x text-primary"></i>
+                </div>
+                <h4 class="card-title">CSV Processing</h4>
+                <p class="card-text">
+                  Upload CSV files containing text data and get comprehensive
+                  sentiment analysis results.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm">
+              <div class="card-body text-center p-4">
+                <div class="feature-icon mb-3">
+                  <i class="fas fa-chart-bar fa-3x text-primary"></i>
+                </div>
+                <h4 class="card-title">Visual Analytics</h4>
+                <p class="card-text">
+                  Beautiful charts and graphs to visualize sentiment
+                  distribution in your data.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm">
+              <div class="card-body text-center p-4">
+                <div class="feature-icon mb-3">
+                  <i class="fas fa-history fa-3x text-primary"></i>
+                </div>
+                <h4 class="card-title">K-Means Cluster and BERT Algorithm</h4>
+                <p class="card-text">
+                  K-means clustering is used to group unlabeled data into
+                  clusters based on similarity.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <img
+              src="/img/istockphoto-1156178759-612x612.jpg"
+              alt="About Us"
+              class="img-fluid rounded shadow"
+            />
+          </div>
+          <div class="col-lg-6">
+            <h2 class="mb-4">About SentimentAnalysis</h2>
+            <p>
+              SentimentAnalysis is a powerful platform designed to help
+              businesses and researchers understand the emotional tone behind
+              text data. Our AI-driven system can process large volumes of text
+              from CSV files and provide accurate sentiment analysis.
+            </p>
+            <p>
+              Whether you're analyzing customer reviews, social media posts, or
+              survey responses, our tool helps you uncover valuable insights to
+              make data-driven decisions.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 bg-light">
+      <div class="container">
+        <h2 class="text-center mb-5">Contact Us</h2>
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <form>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="name" class="form-label">Name</label>
+                  <input type="text" class="form-control" id="name" required />
+                </div>
+                <div class="col-md-6">
+                  <label for="email" class="form-label">Email</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    required
+                  />
+                </div>
+                <div class="col-12">
+                  <label for="subject" class="form-label">Subject</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="subject"
+                    required
+                  />
+                </div>
+                <div class="col-12">
+                  <label for="message" class="form-label">Message</label>
+                  <textarea
+                    class="form-control"
+                    id="message"
+                    rows="4"
+                    required
+                  ></textarea>
+                </div>
+                <div class="col-12 text-center">
+                  <button type="submit" class="btn btn-primary px-4 py-2">
+                    Send Message
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h5><i class="fas fa-smile-beam me-2"></i>SentimentAnalysis</h5>
+            <p class="mb-0">
+              Powerful sentiment analysis tool for your text data.
+            </p>
+          </div>
+          <div class="col-md-3">
+            <h5>Quick Links</h5>
+            <ul class="list-unstyled">
+              <li><a href="#" class="text-white">Home</a></li>
+              <li><a href="#features" class="text-white">Features</a></li>
+              <li><a href="#about" class="text-white">About</a></li>
+              <li><a href="#contact" class="text-white">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <h5>Connect</h5>
+            <div class="social-icons">
+              <a href="#" class="text-white me-2"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" class="text-white me-2"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="#" class="text-white me-2"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <a href="#" class="text-white"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+        </div>
+        <hr class="my-3" />
+        <div class="text-center">
+          <p class="mb-0">&copy; All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Upload CSV Modal with Form -->
+    <div
+      class="modal fade"
+      id="uploadModal"
+      tabindex="-1"
+      aria-labelledby="uploadModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <form
+            id="csvForm"
+            action="/dashboard"
+            method="POST"
+            enctype="multipart/form-data"
+          >
+            <div class="modal-header">
+              <h5 class="modal-title" id="uploadModalLabel">
+                <i class="fas fa-upload me-2"></i>Upload CSV File
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div class="upload-area p-4 text-center border rounded mb-3">
+                <i class="fas fa-file-csv fa-4x mb-3 text-muted"></i>
+                <p class="mb-2">
+                  Drag & drop your CSV file here or click to browse
+                </p>
+                <input
+                  type="file"
+                  id="csvUpload"
+                  name="csvFile"
+                  accept=".csv"
+                  class="d-none"
+                  required
+                />
+                <label for="csvUpload" class="btn btn-outline-primary">
+                  Select File
+                </label>
+                <div class="mt-2">
+                  <small class="text-muted"
+                    >Only CSV files are accepted (Max 5MB)</small
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button
+                type="submit"
+                class="btn btn-primary"
+                id="analyzeBtn"
+                disabled
+              >
+                Analyze
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- JavaScript to enable Analyze button -->
+    <script>
+      const csvInput = document.getElementById("csvUpload");
+      const analyzeBtn = document.getElementById("analyzeBtn");
+
+      csvInput.addEventListener("change", () => {
+        analyzeBtn.disabled = csvInput.files.length === 0;
+      });
+    </script>
+  </body>
+</html>

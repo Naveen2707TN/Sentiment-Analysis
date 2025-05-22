@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Result</title>
+  <link rel="stylesheet" href="/css/sty.css"/>
+</head>
+<body>
+  <div class="container">
+    <label class="section_label">Sentiment Analysis Result</label>
+
+    <div class="final_ans">
+      <div class="left_box">
+        <label class="left">Sentiment Analysis Report</label>
+      </div>
+      <div class="right_box">
+        <a href="/download" download>
+          <span class="download-label">Download Now!</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="split_div">
+      <div class="first_div">
+        <label>Sentiment Analysis Report split into Positive, Negative, and Neutral</label>
+      </div> 
+
+      <div class="remaining_divs">
+        <div class="second_div">
+          <label>Positive reviews</label>
+          <a href="/positive" download>
+            <span class="download-label">Download Now!</span>
+          </a>
+        </div> 
+        <div class="third_div">
+          <label>Negative reviews</label>
+          <a href="/negative" download>
+            <span class="download-label">Download Now!</span>
+          </a>
+        </div> 
+        <div class="fourth_div">
+          <label>Neutral reviews</label>
+          <a href="/neutral" download>
+            <span class="download-label">Download Now!</span>
+          </a>
+        </div> 
+      </div>
+    </div>
+
+    <div class="visual">
+      <div class="visual_top">
+        Sentiment Analysis Visualization
+      </div>
+      
+      <div class="visual_content">
+        <div class="visual_div1">
+          <h3>Pie Chart</h3>
+          <canvas id="myCanvas" width="450" height="380"></canvas>
+        </div>
+        <div class="visual_div2">
+          <h3>Bar Chart</h3>
+          <canvas id="anotherCanvas" width="450" height="380"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    fetch("/pie-chart")
+      .then(response => response.json())
+      .then(data => {
+        const labels = Object.keys(data);
+        const values = Object.values(data);
+
+        // Pie Chart
+        new Chart(document.getElementById("myCanvas"), {
+          type: "pie",
+          data: {
+            labels: labels,
+            datasets: [{
+              label: "Sentiment Analysis Pie Chart",
+              data: values,
+              backgroundColor: ['#36A2EB', '#FF6384', '#FFCE56'],
+            }]
+          }
+        });
+
+        // Bar Chart
+        new Chart(document.getElementById("anotherCanvas"), {
+          type: "bar",
+          data: {
+            labels: labels,
+            datasets: [{
+              label: "Sentiment Analysis Bar Chart",
+              data: values,
+              backgroundColor: ['#36A2EB', '#FF6384', '#FFCE56'],
+            }]
+          },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true
+              }
+            }
+          }
+        });
+      });
+  </script>
+</body>
+</html>
